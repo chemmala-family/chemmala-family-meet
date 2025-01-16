@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home</title>
+        <link rel="stylesheet" href="first.css" />
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1 id="home"><a href="index.html">Home</a></h1>
+                <h1 id="about"><a href="about.html">About</a></h1>
+                <h1 id="contact"><a href="">Contact</a></h1>
+            </section>
+            <div id="divv">
+                <a id="Visit" href="ummer.html">Visit Family</a>
+            </div>
+            <br />
+            <br />
+            <div id="divv">
+                <a id="schedule" href="important.html">Request</a>
+            </div>
+        </main>
+
+        <script>
+            // Scroll-triggered animation for interactive section
+            const interactiveSection = document.querySelector(".interactive-section");
+            const quoteSection = document.querySelector(".quote");
+            const triggerPoint = 150;
+
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > triggerPoint) {
+                    interactiveSection.classList.add("show");
+                    quoteSection.classList.add("show");
+                }
+            });
+
+            // Adding hover effect to links
+            const links = document.querySelectorAll(".link-section a");
+            links.forEach((link) => {
+                link.addEventListener("mouseover", () => {
+                    link.style.transform = "scale(1.1)";
+                    link.style.transition = "transform 0.3s ease";
+                });
+                link.addEventListener("mouseout", () => {
+                    link.style.transform = "scale(1)";
+                });
+            });
+        </script>
+    </body>
+</html>
